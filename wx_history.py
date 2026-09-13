@@ -832,7 +832,11 @@ async function stopService(){
     const r=await api("/api/stop",{method:"POST"});
     document.body.innerHTML="<div style='padding:60px;text-align:center;font-size:16px'>"+(r&&r.msg?"服务正在关闭…":"服务已关闭")+"</div>";
   }catch(e){
-    alert("关闭请求失败："+e.message);
+    // 连不上服务：多半是服务已经自行退出（进程被杀/端口已释放），浏览器无法再收到回应
+    document.body.innerHTML="<div style='padding:60px;text-align:center;font-size:16px;line-height:2'>"
+      +"<div>⚠️ 无法连接服务，它可能已经停止</div>"
+      +"<div style='font-size:14px;color:#888'>（常见原因：服务进程已被关闭。此时数据不受影响，下次双击 wx_history.bat 重新启动即可。）</div>"
+      +"<div style='font-size:14px'>可直接关闭本窗口和命令行窗口。</div></div>";
   }
 }
 $("btnCsv").onclick=exportCsv;

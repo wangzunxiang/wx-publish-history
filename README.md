@@ -35,22 +35,84 @@ OpenAPI 的 `freepublish/batchget`（读已发布列表）对**个人主体未�
 用本机 Chromium 打开后台登录页 → 手机微信扫码 → 用该会话读取后台页面内嵌的
 发表记录数据。**不需要 AppID/AppSecret**。
 
-## 依赖
-- Python 3.8+
-- 浏览器：自动探测 Chromium / Chrome / Edge；都找不到时自动用
-  Playwright 自带内核（需先执行 `playwright install chromium`）
-- Playwright：
-  ```bash
-  # Linux / macOS
-  python3 -m venv .venv
-  .venv/bin/pip install playwright
-  .venv/bin/playwright install chromium     # 可选，装了就不用系统浏览器
+## 安装依赖（完整步骤）
 
-  # Windows (PowerShell)
+只需要两样东西：**Python 3.8+** 和 **Playwright（含浏览器内核）**。
+不需要 pip 装其他任何库（主程序除 playwright 外全部用 Python 标准库）。
+
+### 第 0 步：安装 Python（已装可跳过）
+
+- **Windows**：到 https://www.python.org/downloads/ 下载 Python 3.10+ 安装包，
+  安装时**务必勾选 "Add python.exe to PATH"**。
+  装完在 PowerShell 执行 `python --version` 确认。
+- **Linux (Debian/Ubuntu/Kali)**：
+  ```bash
+  sudo apt update && sudo apt install -y python3 python3-venv python3-pip
+  ```
+- **macOS**：
+  ```bash
+  # 用 Homebrew
+  brew install python
+  # 或到 python.org 下载 macOS 安装包
+  ```
+
+### 第 1 步：克隆仓库并创建虚拟环境
+
+```bash
+git clone https://github.com/wangzunxiang/wx-publish-history.git
+cd wx-publish-history
+```
+
+- **Linux / macOS**：
+  ```bash
+  python3 -m venv .venv
+  source .venv/bin/activate          # 激活虚拟环境（可选，装完可 deactivate）
+  pip install playwright
+  ```
+- **Windows (PowerShell)**：
+  ```powershell
   py -3 -m venv .venv
   .\.venv\Scripts\pip install playwright
-  .\.venv\Scripts\playwright install chromium
   ```
+
+### 第 2 步：安装浏览器内核
+
+```bash
+# Linux / macOS
+.venv/bin/playwright install chromium
+
+# Windows (PowerShell)
+.\.venv\Scripts\playwright install chromium
+```
+
+- 这会下载约 150MB 的 Chromium 到用户目录（`~/.cache/ms-playwright/` 或
+  `%USERPROFILE%\AppData\Local\ms-playwright\`），之后**不再依赖**系统浏览器。
+- Linux 还需要 Chromium 的系统动态库（一般发行版装过 chromium 就有；
+  全新环境缺库时执行）：
+  ```bash
+  .venv/bin/playwright install-deps chromium     # Debian/Ubuntu，需要 sudo
+  ```
+  手动装等价依赖也可以：
+  ```bash
+  sudo apt install -y libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+      libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 \
+      libgbm1 libasound2 libpango-1.0-0 libcairo2
+  ```
+- 如果你机器上已经装了 Chromium / Chrome / Edge，本工具会自动探测使用，
+  第 2 步可以跳过（但推荐装 Playwright 自带的，版本可控、免冲突）。
+
+### 第 3 步：验证安装
+
+```bash
+# Linux / macOS
+.venv/bin/python -c "import playwright; print('playwright OK')"
+ls ~/.cache/ms-playwright/     # 能看到 chromium-* 目录即内核已装好
+
+# Windows (PowerShell)
+.\.venv\Scripts\python -c "import playwright; print('playwright OK')"
+dir "$env:USERPROFILE\AppData\Local\ms-playwright"
+```
+看到 `playwright OK` 且内核目录存在，即安装完成；直接按「使用」一节启动即可。
 
 ## 使用
 ```bash
@@ -66,6 +128,17 @@ python wx_history.py 8765
 3. 登录成功后自动拉取全部发表记录，即可搜索
 4. 会话保存在 wx_state.json：未过期时下次启动自动恢复，免扫码；
    过期后点「刷新数据」会要求重新扫码
+
+## 常见问题（FAQ）
+
+| 现象 | 原因 / 解决 |
+|---|---|
+| 启动后页面一直转圈或提示浏览器错误 | Linux 缺 Chromium 系统库：执行 `.venv/bin/playwright install-deps chromium` 或上面手动 apt 列表 |
+| `playwright install chromium` 下载慢 | 可设镜像：`PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright`（Linux 示例：`PLAYWRIGHT_DOWNLOAD_HOST=... .venv/bin/playwright install chromium`） |
+| 端口 8765 被占用 | 换个端口启动：`./wx_history 9000` 或 `wx_history.bat 9000`，然后访问 `http://127.0.0.1:9000` |
+| 扫码后提示登录失败 / 会话过期 | 微信后台会话一般有效数天；删掉本目录 `wx_state.json` 后重启工具重新扫码即可 |
+| Windows 上双击 .bat 闪退 | 右键 .bat →「以终端运行」或手动开 PowerShell 执行，看报错信息；多为未建 `.venv`，按第 1 步装一次 |
+| 杀毒软件拦截 Chromium 启动 | Playwright 下载的浏览器在用户目录下，把该目录加入白名单 |
 
 ## 功能
 - 模糊搜索：标题/摘要/作者，空格分隔多关键词（需同时匹配），命中高亮

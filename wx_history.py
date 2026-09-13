@@ -689,6 +689,7 @@ mark{background:var(--mark);color:var(--markfg);border-radius:2px;padding:0 1px}
       <button class="primary" id="btnLogin" style="padding:10px 26px;font-size:15px">获取登录二维码</button>
     </div>
     <div class="status" id="loginStatus"></div>
+    <button id="btnStopLogin" style="margin-top:8px;background:#8b2e2e;border-color:#8b2e2e;color:#fff">关闭服务</button>
     <div class="tip">提示：会话有效期数小时；过期后点右上角「刷新数据」会要求重新扫码。</div>
   </div>
 
@@ -708,6 +709,7 @@ mark{background:var(--mark);color:var(--markfg);border-radius:2px;padding:0 1px}
         <button id="btnRefresh">刷新数据</button>
         <button id="btnCsv">导出 CSV</button>
         <button id="btnMd">导出 Markdown</button>
+        <button id="btnStop" style="margin-left:auto;background:#8b2e2e;border-color:#8b2e2e;color:#fff">关闭服务</button>
       </div>
       <div class="count" id="count"></div>
       <table>
@@ -824,7 +826,18 @@ $("btnClear").onclick=()=>{$("q").value="";$("from").value="";$("to").value="";r
 $("from").addEventListener("change",render);
 $("to").addEventListener("change",render);
 $("sort").addEventListener("change",render);
+async function stopService(){
+  if(!confirm("确定关闭服务吗？关闭后需重新启动才能再次使用。"))return;
+  try{
+    const r=await api("/api/stop",{method:"POST"});
+    document.body.innerHTML="<div style='padding:60px;text-align:center;font-size:16px'>"+(r&&r.msg?"服务正在关闭…":"服务已关闭")+"</div>";
+  }catch(e){
+    alert("关闭请求失败："+e.message);
+  }
+}
 $("btnCsv").onclick=exportCsv;
+$("btnStop").onclick=stopService;
+$("btnStopLogin").onclick=stopService;
 $("btnMd").onclick=exportMd;
 $("btnRefresh").onclick=async()=>{
   const r=await api("/api/refresh",{method:"POST"});
@@ -841,6 +854,23 @@ init();
 """
 
 # ---------------------------------------------------------------- HTTP 服务
+
+# 由 main() 在创建服务器后赋值；/api/stop 用它优雅退出
+HTTPD = None
+
+
+def _stop_service():
+    log("收到关闭服务请求，正在退出...")
+    try:
+        if HTTPD is not None:
+            threading.Thread(target=HTTPD.shutdown, daemon=True).start()
+        # 等待主线程退出 serve_forever；兜底强退（chromium 子进程是 daemon 线程管理的）
+        import time
+        time.sleep(2)
+        os._exit(0)
+    except Exception:
+        os._exit(0)
+
 
 class Handler(http.server.BaseHTTPRequestHandler):
     server_version = "wx-history/2.0"
@@ -909,6 +939,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
                         return
                 threading.Thread(target=_login_worker, daemon=True).start()
                 self._json({"ok": True})
+            elif p == "/api/stop":
+                # 先应答，再异步退出（给浏览器时间收到响应）
+                self._json({"ok": True, "msg": "服务正在关闭"})
+                threading.Thread(target=_stop_service, daemon=True).start()
             elif p == "/api/refresh":
                 with LOCK:
                     if not STATE["logged_in"]:
@@ -952,6 +986,8 @@ def main():
         print("  python3 -m venv .venv && .venv/bin/pip install playwright")
         sys.exit(1)
     httpd = http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler)
+    global HTTPD
+    HTTPD = httpd
     if os.path.exists(STATE_FILE):
         # 有已存会话：后台自动校验并（无数据时）拉取
         threading.Thread(target=_refresh_worker, daemon=True).start()

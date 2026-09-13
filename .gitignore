@@ -1,0 +1,7 @@
+wx_state.json
+.venv/
+__pycache__/
+debug.log
+bg_out.log
+captured_xhr.json
+*.pyc

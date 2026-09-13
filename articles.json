@@ -1,0 +1,456 @@
+{
+ "updated_at": "2026-09-13 14:18:31",
+ "count": 45,
+ "articles": [
+  {
+   "date": "2026-09-13 12:45",
+   "ts": 1789274703,
+   "title": "本周影响最大的3个漏洞：CVE-2026-75650满分零日在野，微软补丁日创纪录",
+   "digest": "本周影响最大的3个漏洞：CVE-2026-75650 Magento零日RCE(10.0分)在野利用；CVE-2026-81963等微软9月补丁日972漏洞创纪录；CVE-2026-69414 Defender补丁遭绕过。附检测处置清单。",
+   "url": "https://mp.weixin.qq.com/s/gdbI-rWLahHg43iMmAYcKw",
+   "author": "",
+   "appmsgid": "2247484079",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-12 16:55",
+   "ts": 1789203300,
+   "title": "失陷主机上，你手里该攥着哪几件工具？——应急响应工具箱实战拆解",
+   "digest": "应急响应的第一原则不是快，而是保真。从保全现场到恶意代码分析，一个工具箱的六层结构、三个必带工具，以及五个最常见的错误。",
+   "url": "https://mp.weixin.qq.com/s/qgTnl79VA_gtE46YhffBew",
+   "author": "",
+   "appmsgid": "2247484070",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-12 14:45",
+   "ts": 1789195500,
+   "title": "CNVD-2026-28552：海康门禁终端SADP发现协议缓冲区溢出漏洞分析",
+   "digest": "CNVD-2026-28552指向海康威视门禁产品SADP发现协议缓冲区溢出漏洞。本文基于NVD、Talos报告与厂商公告，梳理漏洞根因、影响面与利用门槛，给出企业自查、检测排查与修复加固的完整路径，供安全工程师参考。",
+   "url": "https://mp.weixin.qq.com/s/9pv3gi7DIgOOxcw1QQJPaA",
+   "author": "",
+   "appmsgid": "2247484065",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-12 12:00",
+   "ts": 1789185600,
+   "title": "Hermes Agent v0.21.2 深度解读",
+   "digest": "零配置登录、子代理实时管控、群聊高可用、插件目录、浏览器凭据库。",
+   "url": "https://mp.weixin.qq.com/s/TANtJW7vDxtQEB0xPHem-A",
+   "author": "",
+   "appmsgid": "2247484059",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-12 10:03",
+   "ts": 1789178635,
+   "title": "GB/T 44886.2-2025《资产信息格式》政策解读：安全产品互联互通的数据底座",
+   "digest": "GB/T 44886.2-2025《网络安全产品互联互通 第2部分：资产信息格式》2025年12月发布、2026年7月实施。本文梳理出台背景、与前身实践指南的核心变化、重点条款业务含义与落地建议。",
+   "url": "https://mp.weixin.qq.com/s/ElXuhl4U-f8JbPdvPtsI4w",
+   "author": "",
+   "appmsgid": "2247484047",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-11 16:00",
+   "ts": 1789113600,
+   "title": "当有人批量爬取商家数据，你该知道他们怎么干的",
+   "digest": "315曝光的获客软件产业链背后，是产业化的数据采集作业。本文从防御视角拆解五类爬虫技术路线、四层检测指纹矩阵与反反爬演进，给出源头脱敏、蜜罐溯源、固证追责的六层反制体系。",
+   "url": "https://mp.weixin.qq.com/s/RIqg1mTKnK4GGUtFs3xxNQ",
+   "author": "",
+   "appmsgid": "2247484042",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-11 11:00",
+   "ts": 1789095600,
+   "title": "CVE-2026-77770：miniOrange 2FA 插件未授权任意选项删除漏洞分析",
+   "digest": "CVSS 10.0：miniOrange 2FA插件（<6.3.1）未授权删除任意wp_options，可锁死管理后台并使全站2FA失效。PoC 10月8日公开，附成因解析、排查思路与修复建议。",
+   "url": "https://mp.weixin.qq.com/s/sZnCrjSnuO1-PK9__Uglkw",
+   "author": "",
+   "appmsgid": "2247484037",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-10 22:00",
+   "ts": 1789048800,
+   "title": "两高一弱：你的安全防线，可能只是一道纸墙",
+   "digest": "高危漏洞、高危服务、弱口令如何成为突破口？本文拆解其关联风险与防护建议。",
+   "url": "https://mp.weixin.qq.com/s/ipcCznTMir1KXEHB8Gx2Dg",
+   "author": "",
+   "appmsgid": "2247484033",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-10 14:00",
+   "ts": 1789020000,
+   "title": "GB/T 46795-2025《公钥密码应用技术体系框架》解读：公钥密码应用的首个国家级框架标准",
+   "digest": "GB/T 46795-2025《公钥密码应用技术体系框架》2025年12月发布、2026年7月实施，确立四层框架，衔接产品侧与应用侧。本文做重点条款解读与企业落地清单。",
+   "url": "https://mp.weixin.qq.com/s/2xt6UduR4OoNBMLNU42Muw",
+   "author": "",
+   "appmsgid": "2247484007",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-10 11:00",
+   "ts": 1789009200,
+   "title": "CVE-2026-69730：Windows DNS 未认证 RCE，SigRed 精神续作的排查与修复",
+   "digest": "微软9月Patch Tuesday披露CVSS 9.8的Windows DNS未认证RCE（CVE-2026-69730），ZDI称其为SigRed精神续作。本文拆解成因、影响面与企业排查修复方案。",
+   "url": "https://mp.weixin.qq.com/s/eUbbtF2z3Q4p0wLDqqimtA",
+   "author": "",
+   "appmsgid": "2247484002",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-09 17:00",
+   "ts": 1788944400,
+   "title": "GB/T 25068.7-2025《网络虚拟化安全》政策解读：NFV/SDN 网络安全的专项国标来了",
+   "digest": "GB/T 25068.7-2025 填补 NFV/SDN 网络虚拟化安全标准空白，2026-07-01 实施。本文梳理标准定位、三大控制域、六属性安全建议框架，并给出企业资产盘点、控制面加固等落地清单与时间轴。",
+   "url": "https://mp.weixin.qq.com/s/3ng-If9IKdxYHABflQYUvg",
+   "author": "",
+   "appmsgid": "2247483997",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-09 14:30",
+   "ts": 1788935400,
+   "title": "WeWorm：微信零点击蠕虫技术拆解——VoIP 内存损坏如何让一通电话接管十亿账号",
+   "digest": "Calif 披露首个跨 iOS/Android 零点击微信蠕虫 WeWorm：VoIP 栈内存损坏，一通电话即可无感接管账号并自动扩散。漏洞已在 8.0.77/8.0.76 及服务端修复，本文拆解影响面与防御要点。",
+   "url": "https://mp.weixin.qq.com/s/nUaCHcQLVLcwPNH1EmHITQ",
+   "author": "",
+   "appmsgid": "2247483992",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-08 15:00",
+   "ts": 1788850800,
+   "title": "GB/T 25068.6-2025《信息技术 安全技术 网络安全 第6部分：无线网络访问安全》解读",
+   "digest": "无线网络访问安全国标 GB/T 25068.6-2025 已于2026年7月1日施行，填补系列空白并对标 ISO/IEC 27033-6。本文梳理其核心变化、重点条款，给出监管研判与企业落地实操建议。",
+   "url": "https://mp.weixin.qq.com/s/A4oIz1uWgTEcBhLC5zrLDw",
+   "author": "",
+   "appmsgid": "2247483987",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-08 09:10",
+   "ts": 1788829839,
+   "title": "CVE-2026-75936 深度解析：一份压缩文档引发的内存放大拒绝服务",
+   "digest": "Amazon ion-java 的 GZIP 自动解压缺陷，让 KB 级构造文档引发 GB 级内存放大，导致 OOM 拒绝服务。本文解析成因与利用门槛，给出依赖清点、入口识别的自查方法与升级 1.12.1 的落地方案。",
+   "url": "https://mp.weixin.qq.com/s/7t_CazxKT3xU-OQxlPtc8A",
+   "author": "",
+   "appmsgid": "2247483982",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-07 18:00",
+   "ts": 1788775200,
+   "title": "攻击者到底是从哪扇门进来的？7条最常见入侵路径全拆解",
+   "digest": "删了木马还会再被黑？因为门没找到。本文拆解攻击者最常用的7条入侵路径：Web打点、钓鱼社工、供应链、弱口令、补丁缺失、云配置失误、内部人员，每条配真实案例与防守要点，文末附应急倒查清单与分角色落地建议。",
+   "url": "https://mp.weixin.qq.com/s/ECfChwYpsZhrShuDTmjREg",
+   "author": "",
+   "appmsgid": "2247483977",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-07 14:00",
+   "ts": 1788760800,
+   "title": "GB/T 46820-2025《网络安全试验平台 体系架构》政策解读：靶场建设有了第一份“国家尺子”",
+   "digest": "首个网络安全试验平台（网络靶场）体系架构国标GB/T 46820-2025发布，2026年7月1日实施。本文从项目视角解读其五大组件架构、攻防知识对接要求与落地工作清单，供靶场建设与采购对标参考。",
+   "url": "https://mp.weixin.qq.com/s/dbqgPfnRuzDGmSeNVu6kTg",
+   "author": "",
+   "appmsgid": "2247483972",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-07 09:48",
+   "ts": 1788745726,
+   "title": "CVE-2026-85148：SmartIT 终端管理 Agent 固定口令漏洞深度解析",
+   "digest": "TWCERT披露SmartIT Desktop Manager四条硬编码凭据漏洞，聚焦CVE-2026-85148：固定口令可远程访问终端，CVSS 9.8。含资产自查、端口收敛与升级11+的工程处置路径。",
+   "url": "https://mp.weixin.qq.com/s/ZICMQ_skysY_5JRQQOsskg",
+   "author": "",
+   "appmsgid": "2247483967",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-06 20:47",
+   "ts": 1788698835,
+   "title": "GB/T 46903-2025个保合规审计标准落地指南：从法定义务到操作规范",
+   "digest": "个保合规审计首个国家标准将于2026年7月1日实施。本文逐条解读三档审计频次、人员分级门槛、证据有效性标准与五阶段实施流程，并给出企业落地工作清单与时间轴。",
+   "url": "https://mp.weixin.qq.com/s/awJo8SjxEDDjvFWJo7u_DA",
+   "author": "",
+   "appmsgid": "2247483962",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-06 10:38",
+   "ts": 1788662324,
+   "title": "CVE-2026-86151 深度分析：Tenda CP3 固件网络配置管理命令注入",
+   "digest": "VulDB披露Tenda CP3固件27.5.57.101网络配置管理模块命令注入（CVSS 3.1评分9.1），同批次另有两处注入点。本文从工程风险视角解析成因与影响面，并给出检测排查与修复缓解方案。",
+   "url": "https://mp.weixin.qq.com/s/_PYalVn7IB0r86c0mH-0sA",
+   "author": "",
+   "appmsgid": "2247483945",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-05 10:44",
+   "ts": 1788576290,
+   "title": "一份\"网络资产地图\"的统一字典来了：GB/T 46902-2025 解读",
+   "digest": "GB/T 46902-2025 于 2026-07-01 实施：图谱要素统一为 4 类 11 大类、字母+7位数字编码，附录 B 规范性\"应符合\"。8 项重点条款逐条解析，附差距盘点清单与落地时间轴。",
+   "url": "https://mp.weixin.qq.com/s/nvegbG4lEWd91NrdjQva1Q",
+   "author": "",
+   "appmsgid": "2247483940",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-05 00:49",
+   "ts": 1788540558,
+   "title": "网络攻击类型全景图：从恶意软件到深伪，一张地图看懂对手在打什么",
+   "digest": "把主流网络攻击类型整理成一张能用的地图：CIA 三要素 × 手段层两条坐标轴，覆盖终端、Web、协议、凭证、社会工程、供应链、云与 AI 九大类别，附应急分诊与攻击面盘点用法。",
+   "url": "https://mp.weixin.qq.com/s/6XNRqvJ12FmKywHPRrT9Rw",
+   "author": "",
+   "appmsgid": "2247483931",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-04 17:32",
+   "ts": 1788514365,
+   "title": "GB/T 46901-2025解读｜个人信息可携带权落地细则出台，2026年7月已实施",
+   "digest": "GB/T 46901-2025《基于个人请求的个人信息转移要求》已于2026年7月1日实施，首次给出个人信息转移的范围、前提、流程与格式要求。本文从八个维度解读，供安全与合规团队参考。",
+   "url": "https://mp.weixin.qq.com/s/RPPG6YaiubFUrth7o-s4Fw",
+   "author": "",
+   "appmsgid": "2247483918",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-04 12:36",
+   "ts": 1788496586,
+   "title": "Chrome V8 类型混淆漏洞 CVE-2026-85046：技术解析与企业处置要点",
+   "digest": "CVE-2026-85046 是 V8 引擎中的类型混淆漏洞，需受害者访问恶意页面即可在渲染进程内执行代码。本文解析其成因机制、影响面与利用现状口径分歧，给出企业版本清点、利用迹象排查与应急处置要点。",
+   "url": "https://mp.weixin.qq.com/s/X9UR7j90e5jinXM-lgDREQ",
+   "author": "",
+   "appmsgid": "2247483909",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-03 20:52",
+   "ts": 1788439974,
+   "title": "GB/T 46071-2025《数据安全和个人信息保护社会责任指南》解读",
+   "digest": "GB/T 46071-2025于2026年3月1日实施：国内首部数据安全和个人信息保护社会责任国标，五大主题20议题、四星级评价、大型网络平台设独立监督机构与年度报告。逐条解析重点条款，附企业落地清单与时间轴。",
+   "url": "https://mp.weixin.qq.com/s/2q3Hs0bYrTj7v1rNL39nQw",
+   "author": "",
+   "appmsgid": "2247483900",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-03 09:07",
+   "ts": 1788397668,
+   "title": "Windows HTTP.sys 整数溢出本地提权漏洞（CVE-2026-62735）深度复盘",
+   "digest": "微软8月补丁修复Windows http.sys驱动整数溢出本地提权漏洞（CVE-2026-62735），曾在Pwn2Own 2026演示、社区PoC已公开。本文解析成因与影响面，给出企业检测自查、修复与应急建议。",
+   "url": "https://mp.weixin.qq.com/s/M_OZQ2lj-2bm3_s-NzTSLg",
+   "author": "",
+   "appmsgid": "2247483895",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-02 23:00",
+   "ts": 1788361200,
+   "title": "渗透练习靶场选型指南：GitHub 星标前十逐个拆解",
+   "digest": "开源渗透靶场怎么选？本文按 GitHub 星标排名，拆解十款真正能动手打的漏洞靶场与脆弱应用，从新手入门到红队 CVE 复现、专项漏洞训练，给出分人群选型建议。",
+   "url": "https://mp.weixin.qq.com/s/FxgN0MytlQ71Uv1AJrL0eQ",
+   "author": "",
+   "appmsgid": "2247483890",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-02 14:00",
+   "ts": 1788328800,
+   "title": "个人信息出境认证首项国标落地：GB/T 46068-2025 深度解读",
+   "digest": "我国个人信息跨境安全管理首项国家标准GB/T 46068-2025正式实施。本文从政策背景、核心变化、重点条款、监管导向、主体影响、落地建议与时间轴八个维度，拆解个人信息出境认证路径的合规要求。",
+   "url": "https://mp.weixin.qq.com/s/OvxCnUu7M4m2RZqkxMVkuA",
+   "author": "",
+   "appmsgid": "2247483869",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-02 09:39",
+   "ts": 1788313187,
+   "title": "Cisco Crosswork SQL注入漏洞（CVE-2026-20030）深度分析：CVSS 10.0、无认证远程触发且无规避方案",
+   "digest": "Crosswork SQL注入CVE-2026-20030：CVSS 10.0，无认证远程利用，官方无规避方案。拆解成因、影响面、检测路径与修复时间盒，请升级7.2.1-SP。",
+   "url": "https://mp.weixin.qq.com/s/dr2kJnex0HmAZ0Ha6wxvFA",
+   "author": "",
+   "appmsgid": "2247483864",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-01 17:59",
+   "ts": 1788256771,
+   "title": "GB/T 45940-2025《网络安全技术 网络安全运维实施指南》政策解读",
+   "digest": "国标首次规范安全运维“做什么、怎么组织、怎么算好”：三种运维模式、31项工作内容、五级能力成熟度与效果量化评估，企业采购、建设与合规自评估的对标标尺。",
+   "url": "https://mp.weixin.qq.com/s/EWEZXRp2zp6oy2WAoTIcSQ",
+   "author": "",
+   "appmsgid": "2247483859",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-09-01 12:02",
+   "ts": 1788235322,
+   "title": "CVE-2026-82854：Nodemailer SMTP 命令注入漏洞分析，从数据流研判到修补加固",
+   "digest": "Nodemailer 8.0.4 之前版本存在 SMTP 命令注入漏洞：envelope.size 经 CRLF 注入可被用于静默附加收件人、寄生发件域名信誉。本文剖析成因、给出企业侧数据流研判逻辑、日志回溯思路与补丁升级方案。",
+   "url": "https://mp.weixin.qq.com/s/v4dReFaJD8n1RA6FAwJttg",
+   "author": "",
+   "appmsgid": "2247483850",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-31 17:39",
+   "ts": 1788169188,
+   "title": "数据安全风险评估新规解读：GB/T 45577-2025 × 第24号令",
+   "digest": "GB/T 45577-2025与第24号令落地：数据安全风险评估从自选动作升级为法定义务，重要数据处理者年度强制评估，报告20个工作日内报送、保存3年，评估机构不得转包、连续3次强制轮换。逐条解析重点条款，附企业落地清单与时间轴。",
+   "url": "https://mp.weixin.qq.com/s/M2dRuIvWK9vu6lqWezJ9cg",
+   "author": "",
+   "appmsgid": "2247483834",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-31 10:07",
+   "ts": 1788142058,
+   "title": "Strix 开源 AI 渗透测试工具安装指导手册",
+   "digest": "Strix 是多智能体开源 AI 渗透测试工具。本文基于仓库 v1.5.3 与官方文档逐项核对，覆盖安装部署、配置项解读、核心功能、典型流程、高频坑点与合规落地建议，可当安装指导手册参考。",
+   "url": "https://mp.weixin.qq.com/s/Yql988xwW5pe0FJ0_anw7Q",
+   "author": "",
+   "appmsgid": "2247483809",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-30 21:49",
+   "ts": 1788097740,
+   "title": "GitHub星数榜出炉：AI智能体安全技能（Skill）开源项目Top 10",
+   "digest": "AI智能体安全技能(Skill)正在取代脚本成为安全能力的新载体。基于390个GitHub仓库实测调研，按星数排出Top10：从818个安全技能的大库、全自主渗透框架，到给Skill本身做安检的扫描器——附选型建议与合规提醒。",
+   "url": "https://mp.weixin.qq.com/s/vHaHBQbL_DgZWGo25ZC-tA",
+   "author": "",
+   "appmsgid": "2247483782",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-30 17:02",
+   "ts": 1788080523,
+   "title": "CVE-2026-82478 深度解析：NASA Trick 仿真环境变量服务器的远程栈溢出风险",
+   "digest": "NASA Trick 19.6.0 变量服务器存在无认证远程栈溢出（CVE-2026-82478）：无边界 sscanf 解析网络输入，可致仿真崩溃乃至内存破坏。本文解析成因与影响面，并给出企业检测排查、升级与网络收敛方案。",
+   "url": "https://mp.weixin.qq.com/s/55mmLFBKwNPurR2FINrUOA",
+   "author": "",
+   "appmsgid": "2247483773",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-30 10:45",
+   "ts": 1788057909,
+   "title": "从\"互联网安全\"到\"网络空间安全\"：公安部176号令政策解读与企业合规应对",
+   "digest": "176号令10月1日施行：公安监督检查对象从两类扩至八类，远程渗透测试法定化，等保三级以上每年一次现场检查。逐条解析重点条款，附企业合规落地清单与时间轴。",
+   "url": "https://mp.weixin.qq.com/s/CDcFC3-kyi33X0CBBHSiOQ",
+   "author": "",
+   "appmsgid": "2247483760",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-30 10:04",
+   "ts": 1788055442,
+   "title": "Log4j2 #4255 漏洞深度解析：反序列化白名单绕过与静默 RCE 风险",
+   "digest": "2026年8月，Log4j2 反序列化白名单 FOIS 被 MarshalledObject 绕过，特定架构下可致静默未授权 RCE。本文解析漏洞成因、影响面与检测修复路径，截至发稿 Apache 尚未发布修复版本。",
+   "url": "https://mp.weixin.qq.com/s/b5sLn5XERmukA8FT9BBURQ",
+   "author": "",
+   "appmsgid": "2247483747",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-30 09:34",
+   "ts": 1788053695,
+   "title": "AI 安全技能库实操手册：Anthropic-Cybersecurity-Skills 用户指南",
+   "digest": "818个结构化安全技能库的公众号版用户手册：部署、框架映射、典型流程、排坑、生产落地边界与合规建议。",
+   "url": "https://mp.weixin.qq.com/s/Ppok9lgrhslu2aXGwTECyA",
+   "author": "",
+   "appmsgid": "2247483738",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 21:36",
+   "ts": 1788010619,
+   "title": "应急响应时最值钱的东西是日志：一份全维度取证清单的完整拆解",
+   "digest": "应急响应中最容易断掉的环节不是技术，而是证据。从一线处置视角拆解一份全维度日志取证清单：六维证据地图、四条强制取证原则、交付规范与企业落地风险。",
+   "url": "https://mp.weixin.qq.com/s/Ymj80t0Z_S_1p9-RKuoaEg",
+   "author": "",
+   "appmsgid": "2247483721",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 20:43",
+   "ts": 1788007439,
+   "title": "藏在“文档查看器”里的信任边界失效：.NET WPF 信息泄露漏洞（CVE-2026-62902）风险分析",
+   "digest": "2026年8月微软补丁修复的WPF信息泄露漏洞（CVE-2026-62902/CNNVD-2026-35072754）：XPS文档包边界逃逸叠加默认凭据外发，中等评分下如何评估真实风险、自查版本盲区并稳妥落地补丁（含8月补丁打印回归风险）。",
+   "url": "https://mp.weixin.qq.com/s/wU8zkbKYjwc2lI8BxA9Ieg",
+   "author": "",
+   "appmsgid": "2247483708",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 19:06",
+   "ts": 1788001560,
+   "title": "CVE-2026-75604 深度解析：Next.js Windows 增量缓存路径遍历漏洞",
+   "digest": "Next.js 严重漏洞 CVE-2026-75604（CVSS 9.0）深度解析：Windows 增量缓存路径遍历致未授权 RCE。从根因、补丁、检测排查到修复缓解的工程风险复盘，附企业自查与落地建议。",
+   "url": "https://mp.weixin.qq.com/s/8gu2Kw05MGI08Pt8LOKElQ",
+   "author": "",
+   "appmsgid": "2247483699",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 18:29",
+   "ts": 1787999344,
+   "title": "Nacos 权限绕过漏洞（QVD-2026-59388）工程风险分析：无凭证接管配置中心",
+   "digest": "Nacos 官方 8 月 27 日紧急发布 3.2.4，奇安信 CERT 披露权限绕过漏洞 QVD-2026-59388（CVSS 9.8）：3.0.0–3.2.3 可无凭证创建管理员、窃取全量配置。工程视角拆解成因、影响面、自查与修复。",
+   "url": "https://mp.weixin.qq.com/s/fhwp_k-T1vNgmOkftm4HVQ",
+   "author": "",
+   "appmsgid": "2247483686",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 18:15",
+   "ts": 1787998523,
+   "title": "Hermes Agent 用户使用手册：从安装部署到安全落地",
+   "digest": "Hermes Agent 工程化使用手册：基于 v0.20.6 源码与官方文档整理，覆盖前置条件、安装部署、配置参数解读、十大核心功能、典型流程、高频排错、局限性与安全落地建议，适合安全工程师与项目经理。",
+   "url": "https://mp.weixin.qq.com/s/8h8wDSV9W35wAUwc9WR8mA",
+   "author": "",
+   "appmsgid": "2247483681",
+   "channel": "发表"
+  },
+  {
+   "date": "2026-08-29 17:57",
+   "ts": 1787997457,
+   "title": "开源自进化 AI Agent「Hermes Agent」深度解析：架构、源码与安全信任模型",
+   "digest": "100万行代码如何管理信任边界？从 SECURITY.md 信任模型、Skills Guard 供应链扫描到子代理上下文隔离，拆解 Nous Research 开源 Agent 的核心源码逻辑与企业落地风险。",
+   "url": "https://mp.weixin.qq.com/s/wFMJcfLFZWo6ro7fT1lw1Q",
+   "author": "",
+   "appmsgid": "2247483672",
+   "channel": "发表"
+  },
+  {
+   "date": "",
+   "ts": 0,
+   "title": "开源 AI 安全运营平台 Flocks 深度解析：架构、源码与落地",
+   "digest": "Flocks 是 AI 原生 SecOps 平台：19.9 万行 Python、多智能体编排、工作流引擎与权限治理。本文从项目背景、技术架构、核心模块源码、优缺点、适用场景、风险、企业落地七个维度做系统性梳理。",
+   "url": "https://mp.weixin.qq.com/s/fENeoVbGfvixEVgMKc4Qfw",
+   "author": "",
+   "appmsgid": "2247483663",
+   "channel": "发表"
+  },
+  {
+   "date": "",
+   "ts": 0,
+   "title": "分享图片",
+   "digest": "",
+   "url": "http://mp.weixin.qq.com/s?__biz=MzkyMTUyMDY2Ng==&tempkey=MTM5MV8vZ0VzZzVhYkJtSnIzelFJYzFBcUgtdE5sMlVjaW1hNjJpZm5Ha1RZM2lnT3ZxSGJReXZNU3gyNXVmLW1WMllRaFJrZEFramNFWjF2RTg5OWxzNXlmajFlek5iVExBRVhGclQ1cjJ3b09wOW1lQXhfampFMnYxUUk4R0VJY25LZ2pUTkNyV2F1d2hiYXZsV1U2V0tLRllNa3o3X25nVzU5cmpITU9Rfn4%3D&chksm=c1831e71f6f4976708ceebaf1c4bcacd446780cbc8bdcc9e9f691f0f623528b45d93198b5c9c#rd",
+   "author": "",
+   "appmsgid": "2247483652",
+   "channel": "发表"
+  }
+ ]
+}

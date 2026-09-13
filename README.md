@@ -1,7 +1,33 @@
-# 公众号发布历史查询工具
+# 公众号发布历史查询工具 (WeChat MP Article History Tool)
 
-查询本账号（blueker-sec共享）微信公众平台「发表记录」，
-带本地 Web 界面：模糊搜索、日期区间、排序、导出 CSV / Markdown。
+> **个人微信公众号** 已发布文章 / 发表记录 查询工具（本地 Web 界面）
+>
+> 适用于**订阅号、服务号、个人主体、未认证账号**。模糊搜索、日期筛选、排序、
+> 导出 CSV/Excel/Markdown，数据仅存本机。
+
+## 简介
+
+本工具查询**你自己的**微信公众号后台「发表记录」——也就是该公众号历史发布的
+全部文章（标题、发布时间、摘要、文章链接、作者），并提供一个本地网页界面：
+
+- 🔍 **模糊搜索**：按标题/摘要/作者搜，支持多关键词（空格分隔，需同时命中），命中高亮
+- 📅 **日期区间筛选** + 时间升/降序排列
+- 📤 **导出 CSV**（带 BOM，Excel 直接打开）**/ Markdown**
+- 🔄 一键刷新全量数据
+- 🔐 会话持久化：扫码登录一次后自动免扫码，直到微信会话过期
+
+**不需要 AppID / AppSecret，不依赖任何第三方接口，无需部署服务器**，
+克隆后在本机跑起来即可（支持 Windows / Linux / macOS）。
+
+## 关键词 / Keywords
+
+微信公众号文章查询 · 公众号历史文章 · 公众号发表记录 · 订阅号文章列表 ·
+文章搜索工具 · 导出公众号文章标题 · WeChat Official Account article history ·
+WeChat MP publish record · subscription account (订阅号) article search ·
+article list query · offline search · 本地查询 · 免 AppSecret · 免服务器
+
+**Tags**: wechat, weixin, 公众号, 订阅号, official-account, article, history,
+search, 文章查询, 发表记录, csv-export, local-web-app, playwright
 
 ## 为什么不用 OpenAPI
 OpenAPI 的 `freepublish/batchget`（读已发布列表）对**个人主体未认证订阅号**

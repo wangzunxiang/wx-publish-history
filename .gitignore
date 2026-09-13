@@ -5,3 +5,4 @@ debug.log
 bg_out.log
 captured_xhr.json
 *.pyc
+articles.json

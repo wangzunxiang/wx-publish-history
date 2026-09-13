@@ -75,6 +75,19 @@ cd wx-publish-history
   .\.venv\Scripts\pip install playwright
   ```
 
+### Windows 一键安装（推荐）
+
+首次使用只需**双击 `install_and_run.bat`**，脚本会自动：
+
+1. 探测本机 Python（`py -3.13` → `-3.12` → … → `python`）
+2. 创建 `.venv` 虚拟环境
+3. pip 安装 playwright（清华镜像优先，失败自动回退官方源）
+4. 下载 Chromium 内核（npmmirror 镜像优先，失败回退官方源；
+   下载失败不致命，会自动回退到本机已装的 Chrome / Edge）
+
+脚本是幂等的：已装好的部分会跳过，重复双击不会重复安装，装完直接启动服务。
+`wx_history.bat` 在未检测到 `.venv` 时也会自动转入该安装流程。
+
 ### 第 2 步：安装浏览器内核
 
 ```bash
@@ -120,7 +133,7 @@ dir "$env:USERPROFILE\AppData\Local\ms-playwright"
 ./wx_history            # 默认端口 8765
 ./wx_history 9000       # 指定端口
 
-# Windows：双击 wx_history.bat，或
+# Windows：双击 wx_history.bat（无 .venv 时自动转一键安装），或
 python wx_history.py 8765
 ```
 1. 浏览器自动打开 http://127.0.0.1:8765
@@ -137,7 +150,8 @@ python wx_history.py 8765
 | `playwright install chromium` 下载慢 | 可设镜像：`PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright`（Linux 示例：`PLAYWRIGHT_DOWNLOAD_HOST=... .venv/bin/playwright install chromium`） |
 | 端口 8765 被占用 | 换个端口启动：`./wx_history 9000` 或 `wx_history.bat 9000`，然后访问 `http://127.0.0.1:9000` |
 | 扫码后提示登录失败 / 会话过期 | 微信后台会话一般有效数天；删掉本目录 `wx_state.json` 后重启工具重新扫码即可 |
-| Windows 上双击 .bat 闪退 | 右键 .bat →「以终端运行」或手动开 PowerShell 执行，看报错信息；多为未建 `.venv`，按第 1 步装一次 |
+| Windows 上双击 .bat 闪退 | 新版 `wx_history.bat` 无 `.venv` 时自动转 `install_and_run.bat` 一键安装；旧版闪退多为 `python` 不在 PATH（安装 Python 时勾选 "Add python.exe to PATH"）|
+| 手机扫码后提示「错误信息 (-6, net::ERR)」 | 手机到微信服务器的瞬时网络抖动，关闭手机代理/VPN 后重新扫码即可，与本工具无关 |
 | 杀毒软件拦截 Chromium 启动 | Playwright 下载的浏览器在用户目录下，把该目录加入白名单 |
 
 ## 功能
@@ -151,7 +165,8 @@ python wx_history.py 8765
 |---|---|
 | wx_history.py | 主程序（单文件，仅 Python 标准库 + playwright） |
 | wx_history | Linux/macOS 启动脚本（自动选 venv 的 python） |
-| wx_history.bat | Windows 启动脚本（双击运行） |
+| wx_history.bat | Windows 启动脚本（无 .venv 时自动转一键安装） |
+| install_and_run.bat | Windows 一键安装+启动脚本（自动建 venv、装依赖、下内核，幂等可重复执行） |
 | .venv/ | playwright 虚拟环境 |
 | wx_state.json | 后台会话（自动生成，**等同登录凭证，勿外传；跨系统不通用**） |
 | articles.json | 文章数据缓存 |
